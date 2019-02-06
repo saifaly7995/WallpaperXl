@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/img_jfy"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:background="@drawable/panda"
+        android:text="Winter Arrival"
+        android:textColor="#e60f0f"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:gravity="center"
+        />
+
+
+</LinearLayout>

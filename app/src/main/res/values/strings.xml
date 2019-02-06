@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">WallpaperXI</string>
+    <string name="st_menu_justforyou">Just for you</string>
+    <string name="st_menu_explore">Explore</string>
+    <string name="st_menu_shop">Categorys</string>
+    <string name="st_menu_logout">Log out</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+</resources>
