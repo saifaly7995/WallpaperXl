@@ -76,7 +76,9 @@ public class FragmentCategory extends Fragment {
                 }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Toast.makeText(context, "Net check kar", Toast.LENGTH_SHORT).show();
+
+                    Toast.makeText(context, "Net check kar"+error, Toast.LENGTH_SHORT).show();
+
             }
         });
 

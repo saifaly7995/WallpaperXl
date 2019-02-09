@@ -46,7 +46,7 @@ public class FragmentForExplore  extends Fragment {
         lv.setHasFixedSize(true);
         lv.setLayoutManager(new LinearLayoutManager(getContext()));
 
-
+        RequestQueue queue = Volley.newRequestQueue(getContext());
 
         // Request a string response from the provided URL.
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
@@ -83,7 +83,7 @@ public class FragmentForExplore  extends Fragment {
         });
 
         // Instantiate the RequestQueue.
-        RequestQueue queue = Volley.newRequestQueue(getContext());
+
         queue.add(stringRequest);
 
 
