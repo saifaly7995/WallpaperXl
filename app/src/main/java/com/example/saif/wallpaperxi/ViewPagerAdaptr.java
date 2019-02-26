@@ -20,7 +20,16 @@ public class ViewPagerAdaptr  extends FragmentPagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
-        return fragmentList.get(position);
+        if (position ==0) {
+            return new FragmentForExplore();
+        } else if (position == 1) {
+            return new FragmentCategory();
+        } else if (position == 2) {
+            return new FragmentJustForYou();
+        }
+        else return new FragmentForExplore();
+
+
     }
 
     @Override

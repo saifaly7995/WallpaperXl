@@ -1,7 +1,9 @@
 package com.example.saif.wallpaperxi;
 
+import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.TabLayout;
+import android.support.v4.view.GravityCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -14,7 +16,7 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toolbar;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
 
 
@@ -50,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+    ViewPagerAdaptr  viewpageradapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,10 +83,11 @@ public class MainActivity extends AppCompatActivity {
         navigationView= findViewById(R.id.navdrawer);
         View h = navigationView.inflateHeaderView(R.layout.nav_header);
 
+       navigationView.setNavigationItemSelectedListener(this);
 
 
 
-        ViewPagerAdaptr  viewpageradapter= new ViewPagerAdaptr(getSupportFragmentManager());
+       viewpageradapter= new ViewPagerAdaptr(getSupportFragmentManager());
 
 
         viewpageradapter.Addfragment(new FragmentForExplore(), "EXPLORE");
@@ -94,5 +98,27 @@ public class MainActivity extends AppCompatActivity {
         viewPager.setAdapter(viewpageradapter);
         tabLayout.setupWithViewPager(viewPager);
 
+
+    }
+
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+        switch (item.getItemId())
+        {
+            case R.id.menu_justforyou:
+                viewPager.setCurrentItem(0);
+                break;
+
+            case R.id.menu_explore:
+                viewPager.setCurrentItem(1);
+                break;
+
+            case R.id.menu_category:
+                viewPager.setCurrentItem(2);
+                break;
+        }
+        drawerLayout.closeDrawer(GravityCompat.START);
+        return true;
     }
 }

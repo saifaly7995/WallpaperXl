@@ -6,15 +6,15 @@
         <item
             android:id="@+id/menu_justforyou"
             android:icon="@drawable/ic_favorite_border_black_24dp"
-            android:title="@string/st_menu_justforyou"></item>
+            android:title="Explore"></item>
         <item
             android:id="@+id/menu_explore"
             android:icon="@drawable/ic_favorite_black_24dp"
-            android:title="@string/st_menu_explore"></item>
+            android:title="Category"></item>
         <item
             android:id="@+id/menu_category"
             android:icon="@drawable/ic_dashboard_black_24dp"
-            android:title="@string/st_menu_shop"></item>
+            android:title="Just For You"></item>
     </group>
     <group android:id="@+id/group1">
 
